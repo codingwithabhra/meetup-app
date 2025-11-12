@@ -1,9 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import EventDetails from './pages/eventDetails.jsx'
+// import './index.css'
+import App from './App.jsx';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+// import EventDetails from './pages/eventDetails.jsx'
+import Events from './pages/Events.jsx';
 
 const router = createBrowserRouter([
   {
@@ -12,7 +13,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/meetups/:eventId",
-    element: <EventDetails />
+    element: <Events />
   }
 ])
 
