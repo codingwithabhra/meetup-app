@@ -74,14 +74,14 @@ const EventDetails = () => {
             <div className="p-4 border rounded shadow-sm bg-light">
               <p>
                 <span>
-                  <i class="fa-solid fa-clock" style={{ color: "#d40202" }}></i>{" "}
+                  <i className="fa-solid fa-clock" style={{ color: "#d40202" }}></i>{" "}
                 </span>
                 {findEvent.date} | {findEvent.time}
               </p>
               <p>
                 <span>
                   <i
-                    class="fa-solid fa-location-dot"
+                    className="fa-solid fa-location-dot"
                     style={{ color: "#d40202" }}
                   ></i>
                 </span>{" "}
@@ -90,7 +90,7 @@ const EventDetails = () => {
               <p>
                 <span>
                   <i
-                    class="fa-solid fa-sack-dollar"
+                    className="fa-solid fa-sack-dollar"
                     style={{ color: "#d40202" }}
                   ></i>
                 </span>{" "}

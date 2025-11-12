@@ -36,8 +36,9 @@ const MeetupList = ({ searchItem }) => {
           <Link
             to={`/meetups/${event._id}`}
             className="link-underline link-underline-opacity-0"
+            key={event._id}
           >
-            <div className="col" key={event._id}>
+            <div className="col">
               <div
                 className="card pb-4"
                 style={{
