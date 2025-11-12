@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const MeetupList = ({ searchItem }) => {
   const [mode, setMode] = useState("both");
-  const { data, loading, error } = useFetch("http://localhost:3000/meetups");
+  const { data, loading, error } = useFetch("https://meetup-backend-xi.vercel.app/meetups");
   const filterModeWise =
     mode === "both" ? data : data.filter((event) => event.mode === mode);
   const finalfiltering = filterModeWise?.filter(

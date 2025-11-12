@@ -5,7 +5,7 @@ import useFetch from "../useFetch";
 import { useParams } from "react-router-dom";
 
 const EventDetails = () => {
-  const { data, loading, error } = useFetch("http://localhost:3000/meetups");
+  const { data, loading, error } = useFetch("https://meetup-backend-xi.vercel.app/meetups");
   console.log(data);
 
   const eventId = useParams();
