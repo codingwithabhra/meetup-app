@@ -3,18 +3,22 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Header from "./components/header";
+import Footer from "./components/footer";
 import MeetupList from "./components/MeetupList";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [searchItem, setSearchItem] = useState("");
 
   return (
     <>
-      <Header />
-      <hr />
-      <main>
-        <MeetupList />
+      <Header searchItem = {searchItem} setSearchItem = {setSearchItem} />
+      
+      <main className="container">
+        <hr />
+        <MeetupList searchItem = {searchItem} />
       </main>
+
+      <Footer />
     </>
   );
 }
