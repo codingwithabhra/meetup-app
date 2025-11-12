@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "../components/header";
-import Footer from "../components/footer";
+import Header from "../components/Header";
+import Footers from "../components/Footers";
 import useFetch from "../useFetch";
 import { useParams } from "react-router-dom";
 
@@ -119,7 +119,7 @@ const Events = () => {
         </div>
       </main>
 
-      <Footer />
+      <Footers />
     </>
   );
 };
