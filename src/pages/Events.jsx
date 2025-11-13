@@ -44,7 +44,7 @@ const Events = () => {
             </div>
             <div className="pb-3">
               <h4 className="fw-bolder">Details:</h4>
-              <p>{findEvent.details}</p>
+              <p style={{ textAlign: "justify" }}>{findEvent.details}</p>
             </div>
             <div className="pb-3">
               <h4 className="fw-bolder mb-4">Additional Information</h4>
