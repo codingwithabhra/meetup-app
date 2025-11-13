@@ -1,13 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = ({searchItem, setSearchItem}) => {
   return (
     <>
       <nav className="navbar navbar-expand-lg ">
         <div className="container d-flex justify-content-between align-items-center">
-          <a className="navbar-brand fw-semibold fs-1" href="#" style={{fontFamily: '"Lavishly Yours", "cursive"', color: 'red'}}>
+          <Link to="/" className="navbar-brand fw-semibold fs-1" href="#" style={{fontFamily: '"Lavishly Yours", "cursive"', color: 'red'}}>
             meetup
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
