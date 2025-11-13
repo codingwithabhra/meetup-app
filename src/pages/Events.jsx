@@ -5,11 +5,12 @@ import useFetch from "../useFetch";
 import { useParams } from "react-router-dom";
 
 const Events = () => {
-  const { data, loading, error } = useFetch("https://meetup-backend-xi.vercel.app/meetups");
+  const { data, loading, error } = useFetch(
+    "https://meetup-backend-xi.vercel.app/meetups"
+  );
   console.log(data);
 
   const eventId = useParams();
-  console.log(eventId);
 
   if (loading) return <p>Loading event details...</p>;
   if (error) return <p>Error loading event.</p>;
@@ -74,7 +75,10 @@ const Events = () => {
             <div className="p-4 border rounded shadow-sm bg-light">
               <p>
                 <span>
-                  <i className="fa-solid fa-clock" style={{ color: "#d40202" }}></i>{" "}
+                  <i
+                    className="fa-solid fa-clock"
+                    style={{ color: "#d40202" }}
+                  ></i>{" "}
                 </span>
                 {findEvent.date} | {findEvent.time}
               </p>
@@ -103,14 +107,35 @@ const Events = () => {
                 Speakers: ({findEvent.speakers.length})
               </h5>
 
-              <div className="d-flex flex-wrap gap-3 mt-3">
-                {findEvent.speakers.map((speaker, index) => (
+              <div className="d-flex flex-wrap gap-4 mt-3">
+                {findEvent.speakers?.map((speaker, index) => (
                   <div
                     key={index}
-                    className="p-3 border border-danger rounded text-danger fw-semibold shadow-sm"
-                    style={{ minWidth: "120px", textAlign: "center",  }}
+                    className="d-flex flex-column align-items-center p-3 border rounded shadow-sm"
+                    style={{
+                      width: "150px",
+                      backgroundColor: "#fff",
+                    }}
                   >
-                    {speaker}
+                    <img
+                      src={speaker.imageUrl}
+                      alt={speaker.name}
+                      className="rounded-circle mb-2"
+                      style={{
+                        width: "70px",
+                        height: "70px",
+                        objectFit: "cover",
+                        border: "2px solid #dc3545",
+                      }}
+                    />
+                    <div className="text-center">
+                      <div className="fw-semibold text-dark">
+                        {speaker.name}
+                      </div>
+                      <div className="text-secondary small">
+                        {speaker.designation}
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>

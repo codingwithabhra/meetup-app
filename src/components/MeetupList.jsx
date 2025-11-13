@@ -25,7 +25,7 @@ const MeetupList = ({ searchItem }) => {
             value={mode}
             onChange={(e) => setMode(e.target.value)}
           >
-            <option value="both">Select Event Type</option>
+            <option value="both">Both</option>
             <option value="online">Online</option>
             <option value="offline">Offline</option>
           </select>
